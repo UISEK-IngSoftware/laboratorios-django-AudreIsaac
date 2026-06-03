@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}{% endblock title %}
+{% block content %}{{trainer | capfirst}}
+    <h3>{{trainer | capfirst}}</h3>
+        <p>Detalles: <strong>{{ pokemon | capfirst }}</strong></p>
+        <ul class="list-group">
+            <li class="list-group-item">
+                <strong> Nivel:</strong> {{ trainer.level | capfirst }}
+            </li>
+            <li class="list-group-item">
+                <strong> Fecha de nacimiento:</strong> {{ trainer.birth_date}}
+            </li>
+        </ul>
+{% endblock content %}
+

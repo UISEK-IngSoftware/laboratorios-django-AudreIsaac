@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <html>
     <head>
         <title>Pokedex</title>
@@ -27,3 +28,30 @@
         </div>
     </body>
 </html>
+=======
+{% extends "base.html" %}
+{% block title %}{{ pokemon | capfirst }}{% endblock title %}
+{% block content %}
+    <p>Has elegido el pokemon: <strong>{{ pokemon | capfirst }}</strong></p>
+        <ul class="list-group">
+            <li class="list-group-item">
+                <strong> Nombre:</strong> {{ pokemon.name | capfirst }}
+            </li>
+            <li class="list-group-item">
+                <strong> Tipo:</strong> {{ pokemon.type | capfirst }}
+            </li>
+            <li class="list-group-item">
+                <strong> Peso:</strong> {{ pokemon.weight}} Kg.
+            </li>
+            <li class="list-group-item">
+                <strong> Altura:</strong> {{ pokemon.height}} Cm.
+            </li>
+            <li class="list-group-item">
+                <strong> Entrenador:</strong> {{ pokemon.trainer | capfirst }}
+            </li>
+        </ul>
+{% endblock content %}
+
+
+    
+>>>>>>> 940edef (Lab 6 completado)
