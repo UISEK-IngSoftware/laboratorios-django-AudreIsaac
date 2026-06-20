@@ -1,11 +1,5 @@
 from django.http import HttpResponse
 from django.template import loader
-<<<<<<< HEAD
-from .models import Pokemon
-
-def index(request):
-    pokemons = Pokemon.objects.all()
-=======
 from .models import Pokemon, Trainer
 from django.shortcuts import redirect, render
 from pokedex.forms import PokemonForm
@@ -16,7 +10,6 @@ from django.contrib.auth.decorators import login_required
 def index(request):
     pokemons = Pokemon.objects.all()
     trainers = Trainer.objects.all()
->>>>>>> 940edef (Lab 6 completado)
     template = loader.get_template('index.html')
     return HttpResponse(template.render({
         'pokemons': pokemons,
@@ -24,11 +17,7 @@ def index(request):
         }, 
         request))
 
-<<<<<<< HEAD
-def pokemon(request, id:int):
-=======
 def pokemon(request, id: int):
->>>>>>> 940edef (Lab 6 completado)
     pokemon = Pokemon.objects.get(id=id)
     template = loader.get_template('display_pokemon.html')
     context = {

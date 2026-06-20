@@ -1,15 +1,5 @@
 from django.db import models
 
-<<<<<<< HEAD
-class Pokemon(models.Model):
-    name = models.CharField(max_length=100)
-    type = models.CharField(max_length=50)
-    weight = models.FloatField()
-    height = models.FloatField()
-    
-    def __str__(self):
-        return self.name
-=======
 class Trainer(models.Model):
     first_name = models.CharField(max_length=30, null=False)
     last_name = models.CharField(max_length=30, null=False)
@@ -17,9 +7,8 @@ class Trainer(models.Model):
     level = models.IntegerField(default=1)
     
     def __str__(self):
-        return f"{self.first_name} {self.last_name}"
-            
-
+        return f"{self.first_name} {self.last_name}"   
+           
 class Pokemon(models.Model):
     name = models.CharField(max_length=30, null=False)
     POKEMON_TYPES = {
@@ -38,5 +27,3 @@ class Pokemon(models.Model):
     
     def __str__(self):
         return self.name
-   
->>>>>>> 940edef (Lab 6 completado)

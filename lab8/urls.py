@@ -21,12 +21,11 @@ from lab8 import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-<<<<<<< HEAD
-    path('', include('pokedex.urls'))
-]
-=======
     path('', include('pokedex.urls')), 
+    path('api/', include('api.urls')),     
     path('accounts/', include('django.contrib.auth.urls')),
-]   + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) \
-    + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
->>>>>>> 940edef (Lab 6 completado)
+]   
+
+urlpatterns+= static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) 
+urlpatterns+= static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
